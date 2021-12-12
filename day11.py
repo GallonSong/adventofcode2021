@@ -63,5 +63,5 @@ def puzzle2(answer=None):
 
 
 if __name__ == "__main__":
-    puzzle1()
+    puzzle1(1627)
     puzzle2(329)
