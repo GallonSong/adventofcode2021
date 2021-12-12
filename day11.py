@@ -15,7 +15,7 @@ def puzzle1(answer=None):
     energy_df = pd.DataFrame(entry_df["entry"].apply(list).tolist(), dtype=int)
     coord_df = energy_df.stack().reset_index().astype(int).rename(columns={"level_0": "x", "level_1": "y", 0: "energy"})
     flashes = 0
-    for i in range(1000):
+    for _ in range(100):
         coord_df["energy"] += 1
         flash_filter = coord_df.energy == 10
         flashed_filter_df = coord_df.loc[coord_df.energy == 100]
@@ -63,5 +63,5 @@ def puzzle2(answer=None):
 
 
 if __name__ == "__main__":
-    puzzle1(1627)
+    puzzle1()
     puzzle2(329)
