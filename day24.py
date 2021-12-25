@@ -1,7 +1,11 @@
 """
-not pandas at all, brute force does not work due to complexity,
+There are 2 patterns for z on each digit: 1) multiply by 26, 2) divide by 26.
+Given that x works as 0/1 conditions to decide which pattern, 
+to achieve z13 = 0, there must be 7 multiplications and 7 divisions,
+so all x conditions must be fulfilled.
+
+Not pandas at all, brute force does not work due to complexity,
 find heuristic rules instead, solved almost by hand, code helps with verification though.
-x works as 0/1 conditions, mostly tricky
 """
 from operator import add, mul, floordiv, mod, eq
 from misc import get_input
